@@ -22,11 +22,6 @@ public class SuperHero extends Hero {
         System.out.println("着地した！");
     }
 
-    // 親クラスで定義されているメソッドのオーバーライド
-    public void run() {
-        System.out.println(this.name + "は撤退した");
-    }
-
     // 親クラスのattack()を呼び出す
     public void attack(Matango m) {
         super.attack(m); // 親インスタンスのattack()を呼び出す

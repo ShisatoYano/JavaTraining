@@ -1,7 +1,6 @@
 package HeroMatangoBattle;
 
-public class Matango {
-    int hp;
+public class Matango extends Monster {
     final int LEVEL = 10; // finalを付けて定数にする
     char suffix;
 
