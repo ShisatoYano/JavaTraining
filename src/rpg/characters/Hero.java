@@ -3,7 +3,7 @@ package rpg.characters;
 import rpg.monsters.Matango;
 
 public class Hero {
-    private int hp      = 100;
+    public int hp      = 100;
     private String name = "ミナト";
     public static int money = 1000;
 

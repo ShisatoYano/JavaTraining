@@ -1,6 +1,10 @@
 package functionobject;
 
+import instance.equals.Account;
+import rpg.characters.Hero;
+
 import java.util.function.*;
+import java.util.*;
 
 // メソッドを変数に代入して呼び出す例
 public class Main {
@@ -35,5 +39,16 @@ public class Main {
         // ToDoubleBiFunction
         BiFunction<String, String, String> func4 = System::getProperty;
         System.out.println(func4.apply("java.version", "不明"));
+
+        // ラムダ式を使って口座クラスを残高順に並び替える
+        // 並び替えのアルゴリズムをラムダ式で渡している
+        // 引数として関数を受け取る関数のことを高階関数という
+        List<Account> list = new ArrayList<>();
+        Collections.sort(list, (x, y) -> (x.zandaka - y.zandaka));
+
+        // 高階関数を利用し戦闘不能な勇者を探す
+        List<Hero> heroes = new ArrayList<>();
+        boolean anyoneKnockedOut =
+                heroes.stream().anyMatch(h -> h.hp == 0);
     }
 }
